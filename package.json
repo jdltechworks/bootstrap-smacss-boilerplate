@@ -1,0 +1,22 @@
+{
+  "name": "JDLtechworks-bootstrap-boilerplate",
+  "version": "1.0.0",
+  "description": "JDLtechworks Boostrap SMACSS Boilerplate",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "angular": "^1.5.0",
+    "bootstrap-sass": "^3.3.6",
+    "jquery": "^1.11.3",
+    "jquery-knob": "^1.2.11",
+    "mustache": "^2.2.1"
+  },
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-jshint": "^0.12.0"
+  }
+}

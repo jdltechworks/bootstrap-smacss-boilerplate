@@ -1,0 +1,47 @@
+@mixin font-face($style-name, $file, $family, $category: "") {
+  $filepath: "../fonts/" + $family + "/" + $file;
+  @font-face {
+    font-family: #{$style-name};
+    src: url($filepath + ".eot");
+    src: url($filepath + ".eot?#iefix") format("embedded-opentype"), url($filepath + ".woff") format("woff"), url($filepath + ".ttf") format("truetype"), url($filepath + ".svg#" + $style-name + "") format("svg");
+  }
+
+  %#{$style-name} {
+    font: {
+      @if $category != "" {
+        family: #{$style-name}, #{$category};
+      }
+      @else {
+        family: #{$style-name};
+        weight: normal;
+      }
+    };
+  }
+}
+
+/**
+ * Declaring fonts
+ *
+ */
+
+
+//Bootstrap glyphicon
+@include font-face(Glyphicons Halflings, glyphicons-halflings-regular, glyphicons);
+
+//Font Awesome
+@include font-face(Font Awesome, fontawesome-webfont, glyphicons);
+
+//Proxima Nova Regular
+@include font-face(Proxima Nova Regular, proximanova-regular-webfont, proximanova);
+
+//Proxima Nova Bold
+@include font-face(Proxima Nova Bold, proximanova-bold-webfont, proximanova);
+
+//Proxima Nova SemiBold
+@include font-face(Proxima Nova SemiBold, proximanova-semibold-webfont, proximanova);
+
+
+//Proxima Nova Condenesed 
+@include font-face(Proxima Nova Condenesed SemiBold, proximanovacond-semibold-webfont, proximanova);
+
+
